@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="myFirstApp">
+<html>
 	<head>
 	<meata charset="utf-8">
 	<title> My first angularJS App </title>
+	<style> body {font-size: 1.3em; }</style>
 	<script src = "angular.min.js"></script>
 	<script src = "app.js"></script>
 	</head>
 	
-	<body>
-		<h1> This is the initial website for the angularJS  tutorial </h1>
+	<body ng-app="myFirstApp">
+		<h1>Name Calculator  </h1>
 		<div ng-controller="MyFirstController">
-			<input type="text" ng-model="name">
-			 {{sayHello()}}
+			<div>
+				Your Name:  
+				<input type="text"
+					ng-model="name"
+					ng-keyup="calcNameValue();">
+			</div>
+			<div>Total numeric value of person's name is:
+				{{totalVal}}
+			</div>
 		</div>
 	</body>
 </html>
