@@ -8,12 +8,20 @@
 	function MyFirstController($scope){
 		$scope.name = "";
 		$scope.totalVal = 0;
+		$scope.stateOfCalc = "calc";
 		$scope.sayHello = function(){
 			return "Hello "+ $scope.name;
 		};
 		$scope.calcNameValue = function(){
 			var totalNameValue = calaculatNumercFromString($scope.name);
 			$scope.totalVal = totalNameValue;
+			if($scope.totalVal ==0){
+				$scope.stateOfCalc = "calc";
+			}
+			else{
+				$scope.stateOfCalc = "done";
+			}
+			
 		};
 	}
 	
