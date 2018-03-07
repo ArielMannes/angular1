@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
 	<head>
 	<meata charset="utf-8">
-	<title> Hello Coursera </title>
+	<title> My first angularJS App </title>
+	<script src = "angular.min.js"></script>
+	<script src = "app.js"></script>
 	</head>
 	
 	<body>
-	<h1> this is the initial website for the angular1 tutorial </h1>
+		<h1> This is the initial website for the angularJS  tutorial </h1>
+		<div ng-controller="MyFirstController">
+			<input type="text" ng-model="name">
+			 {{sayHello()}}
+		</div>
 	</body>
 </html>
