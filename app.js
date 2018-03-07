@@ -3,7 +3,10 @@
 	
 	angular.module('myFirstApp', [])
 	
-	.controller('MyFirstController', function($scope){
+	.controller('MyFirstController',MyFirstController );
+	
+	MyFirstController.$inject = ['$scope'];
+	function MyFirstController($scope){
 		$scope.name = "";
 		$scope.totalVal = 0;
 		$scope.sayHello = function(){
@@ -13,7 +16,7 @@
 			var totalNameValue = calaculatNumercFromString($scope.name);
 			$scope.totalVal = totalNameValue;
 		};
-	});
+	}
 	
 	function calaculatNumercFromString(string){
 		var totalVal = 0;

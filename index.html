@@ -15,7 +15,7 @@
 				Your Name:  
 				<input type="text"
 					ng-model="name"
-					ng-keyup="calcNameValue();">
+					ng-blur="calcNameValue();"> 
 			</div>
 			<div>Total numeric value of person's name is:
 				{{totalVal}}
