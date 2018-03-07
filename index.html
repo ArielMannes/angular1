@@ -14,8 +14,8 @@
 			<div>
 				Your Name:  
 				<input type="text"
-					ng-model="name"
-					ng-blur="calcNameValue();"> 
+					ng-model="name"> 
+				<button ng-click="calcNameValue();"> Calculate</button>
 			</div>
 			<div>Total numeric value of person's name is:
 				{{totalVal}}

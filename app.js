@@ -2,10 +2,9 @@
 	'use strict';
 	
 	angular.module('myFirstApp', [])
-	
 	.controller('MyFirstController',MyFirstController );
 	
-	MyFirstController.$inject = ['$scope'];
+	MyFirstController.$inject = ['$scope'];// inject protector
 	function MyFirstController($scope){
 		$scope.name = "";
 		$scope.totalVal = 0;
