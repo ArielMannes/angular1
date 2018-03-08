@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meata charset="utf-8">
+	<title> My first angularJS App </title>
+	<style> body {font-size: 1.3em; }</style>
+	<script src = "angular.min.js"></script>
+	<script src = "app.js"></script>
+	</head>
+	
+	<body ng-app="myFirstApp">
+		<h1>Name Calculator  </h1>
+		<div ng-controller="MyFirstController">
+			<div>
+				Your Name:  
+				<input type="text"
+					ng-model="name"> 
+				<button ng-click="calcNameValue();"> Calculate</button>
+			</div>
+			<div>Total numeric value of person's name is:
+				{{totalVal}}
+				<br>
+				<img ng-src="images/{{stateOfCalc}}.jpg">
+			</div>
+		</div>
+	</body>
+</html>
